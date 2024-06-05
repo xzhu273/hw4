@@ -1,5 +1,8 @@
 <h1><%= @place["name"] %></h1>
 
+@entries = Entry.where({ "entry_id" => @entry["id"] , "user_id" => @current_user["id"] })
+
+
 <h2>My Entries</h2>
 <% for entry in @entries %>
   <h3><%= entry["title"] %></h3>
@@ -14,3 +17,4 @@
 <p>
    <a class="btn btn-primary" href="/places" role="button">Back to All Place</a>
 </p>
+

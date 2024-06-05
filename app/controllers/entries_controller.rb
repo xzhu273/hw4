@@ -15,3 +15,7 @@ class EntriesController < ApplicationController
   end
 
 end
+
+class Entry < ApplicationRecord
+  has_one_attached :uploaded_image
+end
